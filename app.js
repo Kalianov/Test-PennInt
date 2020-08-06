@@ -18,6 +18,10 @@ const validate = () => {
   if (username === '') {
     return 'Username is required'
   }
+    // Bug 1 -  if Username has any spaces -> alert('Username cannot have spaces')
+  if (/\s/.test(username)) {
+    return 'Username cannot have spaces'
+  }
   if (username.length > 15) {
     return 'Username exceeds max character length (15)'
   }
