@@ -25,6 +25,10 @@ const validate = () => {
   if (username.length > 15) {
     return 'Username exceeds max character length (15)'
   }
+  //Bug 2 -  if Username less than 5 characters -> alert();
+  if (username.length < 5) {
+    return 'Username does not meet minimum character length (5)'
+  }
   if (/[~`@!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g.test(username)) {
     return 'Special characters are not allowed'
   }
